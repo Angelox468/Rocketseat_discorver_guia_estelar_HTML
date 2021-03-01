@@ -1,0 +1,54 @@
+<!--
+  2 Lojas
+    quantos produtos foram produzidos, quantos vendidos e agrupado por nome dos produtos
+    (para ocupar duas linhas utilizamos a tag rowspan como mostrado a baixo)
+    (para ocupar duas colunas utilizamos a tag colspan como mostrado a baixo)
+
+    <colgroup> (tag para agrupar as colunas)
+      <col> (essa tag significa cada coluna da tabela)
+      (nas tag's col só utilizamos span para aumentar o numero de colunas que pega)
+      (o scope="colgroup" mosta que o header deçe tem a ver com o agrupamento de colunas)
+      (o scope="col" mosta que o header deçe tem a ver com as colunas)
+      (o scope="row" mostra que é um scopo de linha)
+ -->
+ <table>
+
+  <caption>Produzidos x Vendidos por loja</caption>
+  <colgroup>
+    <col>
+    <col span="2" style="background-color: red;">
+    <col span="2" style="background-color: blue;">
+  </colgroup>
+
+  <thead>
+    <tr>
+      <th rowspan="2"></th>
+      <th colspan="2" scope="colgroup">Afonso Pena</th>
+      <th colspan="2" scope="colgroup">Antônia Pereira</th>
+    </tr>
+
+    <tr>
+      <th scope="col">Produzidos</th>
+      <th scope="col">Vendidos</th>
+      <th scope="col">Produzidos</th>
+      <th scope="col">Vendidos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Vassoura</th>
+      <td>50</td>
+      <td>30</td>
+      <td>20</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th scope="row">Baldes</th>
+      <td>10</td>
+      <td>10</td>
+      <td>30</td>
+      <td>25</td>
+    </tr>
+  </tbody>
+
+ </table>
